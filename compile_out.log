@@ -1,0 +1,23 @@
+═══════════════════════════════════════════════════
+  Smart Agriculture Monitoring System — Build
+═══════════════════════════════════════════════════
+[1/2] Running CMake...
+-- Using the multi-header code from /mnt/d/Wipro Project/Smart Agriculture System/build/_deps/json-src/include/
+-- Configuring done (37.1s)
+-- Generating done (5.5s)
+-- Build files have been written to: /mnt/d/Wipro Project/Smart Agriculture System/build
+[2/2] Compiling...
+[  5%] Built target gtest
+[ 10%] Built target gtest_main
+[ 15%] Built target gmock
+[ 20%] Built target gmock_main
+[ 58%] Built target smart_agriculture_tests
+[ 61%] Building CXX object CMakeFiles/smart_agriculture.dir/src/WebServer.cpp.o
+[ 64%] Linking CXX executable smart_agriculture
+[100%] Built target smart_agriculture
+
+✓ Build complete.
+  Binary: /mnt/d/Wipro Project/Smart Agriculture System/build/smart_agriculture
+
+  Run:  ./build/smart_agriculture --mode simulation
+═══════════════════════════════════════════════════

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Smart Agro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">Smart Agro</div>
+            </div>
+            <nav class="nav-links">
+                <a href="/dashboard" class="nav-link">Dashboard</a>
+                <a href="/farm" class="nav-link">Farm Info</a>
+                <a href="/profile" class="nav-link active">Profile</a>
+                <a href="/settings" class="nav-link">Settings</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <h2 class="page-title">User Profile</h2>
+            </header>
+            <div class="content-container">
+                <div class="data-card" style="padding: 2rem; max-width: 500px">
+                    <h3>Account Settings</h3>
+                    <div style="margin-top: 1.5rem;">
+                        <input type="text" class="form-group"
+                            style="width: 100%; padding: 0.75rem; background: var(--bg-dark); border: 1px solid var(--border); color: white; border-radius: 0.5rem; margin-bottom: 1rem;"
+                            value="John Farmer" disabled>
+                        <input type="email" class="form-group"
+                            style="width: 100%; padding: 0.75rem; background: var(--bg-dark); border: 1px solid var(--border); color: white; border-radius: 0.5rem; margin-bottom: 1rem;"
+                            value="john@farmer.com" disabled>
+                        <button class="btn-primary">Update Profile</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Tinkercad Data Bridge",
+    "version": "1.0.0",
+    "description": "Bridges Tinkercad Serial Monitor data to local Smart Agro Dashboard.",
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "http://localhost:8080/*",
+        "http://127.0.0.1:8080/*",
+        "https://www.tinkercad.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "Tinkercad Data Bridge",
+        "default_popup": "popup.html"
+    }
+}

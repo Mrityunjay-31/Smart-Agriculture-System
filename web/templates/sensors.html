@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data - Smart Agro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    Smart Agro
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="/dashboard" class="nav-link">Dashboard</a>
+                <a href="/sensors" class="nav-link active">Sensors</a>
+                <a href="/alerts" class="nav-link">Alerts</a>
+                <a href="/reports" class="nav-link">Reports</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <h2 class="page-title">Sensor History</h2>
+            </header>
+            <div class="content-container">
+                <div class="data-card" style="padding: 2rem;">
+                    <h3>Historical Data Table</h3>
+                    <p style="color:var(--text-muted); margin-bottom:1rem;">Recent 100 readings</p>
+                    <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid var(--border); color: var(--text-muted);">
+                                <th style="padding: 1rem 0;">Time</th>
+                                <th>Temp (°C)</th>
+                                <th>Hum (%)</th>
+                                <th>Soil (%)</th>
+                                <th>pH</th>
+                                <th>Light (%)</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTable">
+                            <tr>
+                                <td colspan="7" style="padding: 1rem 0; color: var(--text-muted);">Loading sensor
+                                    history...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function fetchHistory() {
+            try {
+                const res = await fetch('/api/sensors/history?limit=100');
+                if (res.ok) {
+                    const data = await res.json();
+                    const tbody = document.getElementById('historyTable');
+                    tbody.innerHTML = '';
+
+                    data.forEach(row => {
+                        const date = new Date(row.timestamp);
+                        const tr = document.createElement('tr');
+                        tr.style.borderBottom = '1px solid var(--border)';
+                        tr.innerHTML = `
+                            <td style="padding: 1rem 0; font-family: monospace;">${date.toLocaleString()}</td>
+                            <td>${row.temperature.toFixed(1)}</td>
+                            <td>${row.humidity.toFixed(1)}</td>
+                            <td>${row.soilMoisture.toFixed(1)}</td>
+                            <td>${row.ph.toFixed(1)}</td>
+                            <td>${row.lightIntensity.toFixed(0)}</td>
+                            <td><span class="${row.overallStatus.toLowerCase().includes('optimal') ? 'status-optimal' : 'status-warning'}" style="padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.75rem;">${row.overallStatus}</span></td>
+                        `;
+                        tbody.appendChild(tr);
+                    });
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        fetchHistory();
+    </script>
+</body>
+
+</html>

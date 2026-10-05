@@ -1,0 +1,69 @@
+@startuml
+package "Smart Agriculture System" {
+
+  class SensorData {
+    + double temperature
+    + double humidity
+    + double soilMoisture
+    + double ph
+    + double lightIntensity
+    + string overallStatus
+    + string timestamp
+    + toJson() : json
+  }
+
+  class SerialPort {
+    - int fd
+    - string device
+    - int baud
+    + open() : bool
+    + close()
+    + readLine() : string
+    + reconnect() : bool
+  }
+
+  class SensorParser {
+    + parse(string input) : optional<SensorData>
+  }
+
+  class SensorValidator {
+    + validate(SensorData data) : bool
+  }
+
+  class ThresholdConfig {
+    + load(string path) : bool
+    + getMin(string sensor) : double
+    + getMax(string sensor) : double
+  }
+
+  class SensorProcessor {
+    - ThresholdConfig thresholds
+    + process(SensorData data)
+  }
+
+  class FirebaseClient {
+    + pushSensorData(...)
+    + pushAlert(...)
+    + storeUserProfile(...)
+  }
+  
+  class AlertManager {
+    + evaluate(SensorData data)
+    + getActiveAlerts() : list
+  }
+  
+  class WebServer {
+    + start()
+    - setupRoutes()
+  }
+
+  SerialPort --> SensorParser : reads raw strings
+  SensorParser --> SensorData : creates
+  SensorData --> SensorValidator : validated
+  SensorValidator --> SensorProcessor : processed
+  SensorProcessor --> ThresholdConfig : uses
+  SensorProcessor --> AlertManager : triggers
+  SensorProcessor --> FirebaseClient : persists
+  WebServer --> FirebaseClient : reads
+}
+@enduml

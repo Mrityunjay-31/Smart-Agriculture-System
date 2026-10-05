@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Smart Agro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">Smart Agro</div>
+            </div>
+            <nav class="nav-links">
+                <a href="/dashboard" class="nav-link">Dashboard</a>
+                <a href="/farm" class="nav-link">Farm Info</a>
+                <a href="/profile" class="nav-link">Profile</a>
+                <a href="/settings" class="nav-link active">Settings</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <h2 class="page-title">System Settings</h2>
+            </header>
+            <div class="content-container">
+                <div class="data-card" style="padding: 2rem;">
+                    <h3>Threshold Configuration</h3>
+                    <p style="color:var(--text-muted); margin-bottom:1.5rem;">To change thresholds permanently, please
+                        edit <code>config/thresholds.conf</code> and restart the backend server.</p>
+                    <div
+                        style="background-color: var(--bg-dark); padding: 1.5rem; border-radius: 0.5rem; border: 1px solid var(--border); font-family: monospace; white-space: pre;">
+                        temp_min=20.0
+                        temp_max=30.0
+                        hum_min=40.0
+                        hum_max=60.0
+                        soil_min=30.0
+                        soil_max=70.0
+                        ph_min=6.0
+                        ph_max=7.5
+                        light_min=20.0
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

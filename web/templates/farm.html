@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Layout - Smart Agro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">Smart Agro</div>
+            </div>
+            <nav class="nav-links">
+                <a href="/dashboard" class="nav-link">Dashboard</a>
+                <a href="/farm" class="nav-link active">Farm Info</a>
+                <a href="/profile" class="nav-link">Profile</a>
+                <a href="/settings" class="nav-link">Settings</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="topbar">
+                <h2 class="page-title">Farm Information</h2>
+            </header>
+            <div class="content-container">
+                <div class="data-card" style="padding: 2rem;">
+                    <h3>Farm Details</h3>
+                    <p style="color:var(--text-muted); margin-bottom:1rem;">Manage your active fields and crop types.
+                    </p>
+                    <div
+                        style="background-color: var(--bg-dark); padding: 1rem; border-radius: 0.5rem; border: 1px solid var(--border);">
+                        <p><strong>Farm Name:</strong> <span id="frmName">Green Valley Farm</span></p>
+                        <p><strong>Location:</strong> <span id="frmLoc">California, USA</span></p>
+                        <p><strong>Primary Crop:</strong> <span id="frmCrop">Tomatoes (Solanum lycopersicum)</span></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# Environment & secrets
+.env
+*.pem
+*.key
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cache/
+
+# Compiled binaries
+*.o
+*.a
+*.so
+*.out
+smart_agriculture
+smart_agriculture_tests
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Compile commands
+compile_commands.json
+
+# Tinkercad
+.env

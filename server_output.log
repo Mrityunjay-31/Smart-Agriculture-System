@@ -1,0 +1,307 @@
+
+  ╔═══════════════════════════════════════════════════════════╗
+  ║       🌱 Smart Agriculture Monitoring System 🌱           ║
+  ║                                                           ║
+  ║   Monitor → Analyze → Grow                                ║
+  ╚═══════════════════════════════════════════════════════════╝
+    
+[Config] Loaded .env from .env
+[Config] Cannot open config: config/config.conf
+[Config] Mode:   simulation
+[Config] Device: /dev/ttyACM0
+[Config] Baud:   9600
+[Config] Port:   8080
+[Config] Farm:   farm_001
+[ThresholdConfig] Loaded 5 sensor thresholds from config/thresholds.conf
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] Connection test failed.
+[Main] Starting SIMULATION mode
+[Pipeline] Started in SIMULATION mode.
+[Pipeline] Simulation mode active. Generating sensor data...
+[SIM] Temp: 22.7C | Hum: 51% | Soil: 49% | pH: 7.0 | Light: 76%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=22.7°C H=51% S=49% pH=7 L=76% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+
+
+====> [DEBUG] WebServer::setupRoutes() IS BEING EXECUTED! <====
+
+═══════════════════════════════════════════════════
+  Smart Agriculture Web Server
+  http://0.0.0.0:8080
+═══════════════════════════════════════════════════
+(2026-10-04 22:46:16) [INFO    ] Crow/master server is running at http://0.0.0.0:8080 using 12 threads
+(2026-10-04 22:46:16) [INFO    ] Call `app.loglevel(crow::LogLevel::Warning)` to hide Info level logs.
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 23.3C | Hum: 51% | Soil: 49% | pH: 7.2 | Light: 78%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=23.3°C H=51% S=49% pH=7.2 L=78% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 23.3C | Hum: 49% | Soil: 52% | pH: 7.2 | Light: 73%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=23.3°C H=49% S=52% pH=7.2 L=73% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 23.9C | Hum: 50% | Soil: 49% | pH: 7.0 | Light: 78%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=23.9°C H=50% S=49% pH=7 L=78% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 24.3C | Hum: 52% | Soil: 48% | pH: 7.1 | Light: 79%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=24.3°C H=52% S=48% pH=7.1 L=79% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 24.2C | Hum: 53% | Soil: 52% | pH: 7.0 | Light: 74%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=24.2°C H=53% S=52% pH=7 L=74% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 25.3C | Hum: 50% | Soil: 48% | pH: 7.1 | Light: 75%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=25.3°C H=50% S=48% pH=7.1 L=75% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 24.3C | Hum: 51% | Soil: 50% | pH: 7.0 | Light: 79%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=24.3°C H=51% S=50% pH=7 L=79% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 25.7C | Hum: 51% | Soil: 48% | pH: 6.8 | Light: 78%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=25.7°C H=51% S=48% pH=6.8 L=78% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 26.0C | Hum: 49% | Soil: 50% | pH: 6.7 | Light: 81%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=26°C H=49% S=50% pH=6.7 L=81% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 26.9C | Hum: 47% | Soil: 51% | pH: 6.8 | Light: 79%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=26.9°C H=47% S=51% pH=6.8 L=79% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 26.4C | Hum: 44% | Soil: 53% | pH: 7.1 | Light: 78%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=26.4°C H=44% S=53% pH=7.1 L=78% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 26.1C | Hum: 42% | Soil: 54% | pH: 6.9 | Light: 78%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=26.1°C H=42% S=54% pH=6.9 L=78% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 27.4C | Hum: 42% | Soil: 57% | pH: 6.9 | Light: 75%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=27.4°C H=42% S=57% pH=6.9 L=75% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 26.5C | Hum: 42% | Soil: 59% | pH: 7.0 | Light: 76%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=26.5°C H=42% S=59% pH=7 L=76% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 27.6C | Hum: 42% | Soil: 60% | pH: 6.7 | Light: 74%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=27.6°C H=42% S=60% pH=6.7 L=74% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[SIM] Temp: 26.5C | Hum: 41% | Soil: 58% | pH: 6.6 | Light: 69%
+[SIM] -> STATUS: All crop parameters are optimal.
+[Pipeline] Processed: T=26.5°C H=41% S=58% pH=6.6 L=69% → OPTIMAL
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+[Firebase] HTTP 404: {
+  "error" : "404 Not Found"
+}
+
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f20
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f28
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f30
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f38
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f40
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f48
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f50
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f58
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f60
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f68
+(2026-10-04 22:47:51) [INFO    ] Closing IO service 0x61b53a428f70
+(2026-10-04 22:47:51) [INFO    ] Closing main IO service (0x61b53a47ed58)
+(2026-10-04 22:47:51) [INFO    ] Exiting.
+[Pipeline] Stopped.
+[Main] Goodbye! 🌿

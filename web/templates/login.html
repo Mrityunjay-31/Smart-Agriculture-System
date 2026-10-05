@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Smart Agriculture Monitoring System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>Smart Agro</h1>
+            <p class="subtitle">Access your farm monitoring dashboard</p>
+            
+            <div id="alertBox" class="alert"></div>
+
+            <form id="loginForm" method="POST">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="farmer@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn-primary" id="loginBtn">Sign In</button>
+            </form>
+            
+            <div class="auth-links">
+                <p>Don't have an account? <a href="/signup">Sign up</a></p>
+                <p style="margin-top: 0.5rem;"><a href="/forgot-password">Forgot password?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('loginBtn');
+            const alertBox = document.getElementById('alertBox');
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            btn.textContent = 'Signing in...';
+            btn.disabled = true;
+            
+            try {
+                const response = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    window.location.href = '/dashboard';
+                } else {
+                    alertBox.textContent = data.message || 'Login failed. Please check credentials.';
+                    alertBox.className = 'alert error';
+                    alertBox.style.display = 'block';
+                }
+            } catch (err) {
+                alertBox.textContent = 'Network error occurred. Please try again.';
+                alertBox.className = 'alert error';
+                alertBox.style.display = 'block';
+            } finally {
+                btn.textContent = 'Sign In';
+                btn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>
